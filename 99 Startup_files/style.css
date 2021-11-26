@@ -754,4 +754,9 @@ footer hr {
   .mob-view{
     display: block;
   }
+  .question {
+    padding: 20px 20px;
+    background-size: cover !important;
+    overflow: hidden;
+  }
 }
