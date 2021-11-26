@@ -1,4 +1,4 @@
-let topics = ['mobile app ','website ','product ']
+let topics = ['mobile apps ','website ','product ']
 let slideIndex = 4;
 let slideIndexWork = 1
 let slideIndexMember = 1
@@ -13,7 +13,8 @@ let index = 0;
 let currentIndex =0;
 // Typing text element
 const typingText = document.querySelector('.typing-text')
-
+console.log(typingText.className);
+const typingTextMob = document.querySelector('.typing-text-mob')
 //Typing text function
 setTimeout(() => {
     setInterval(() => {
@@ -25,10 +26,28 @@ setTimeout(() => {
         if(currentIndex === topics.length){
             currentIndex = 0;
         }
-
+       
         typingText.textContent = topics[currentIndex].slice(0,++index)
+        // typingTextMob .textContent = topics[currentIndex].slice(0,++index)
     }, 200);    
 }, 2000);
+// for mobile view
+setTimeout(() => {
+  setInterval(() => {
+     
+      if(index === topics[currentIndex].length - 1){
+          index = 0;
+          currentIndex++;
+      }
+      if(currentIndex === topics.length){
+          currentIndex = 0;
+      }
+
+      typingTextMob .textContent = topics[currentIndex].slice(0,++index)
+  }, 200);    
+}, 2000);
+
+
 
 //Moving the footer slideshow
 showSlidesQuestion(slideIndex);

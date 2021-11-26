@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
-  --color-primary: #ff0055;
+  /* --color-primary: #ff0055; */
+  --color-primary:#DC1871;
   --color-secondary: #424ba6;
   --color-dark: #2f2f2f;
   --color-button: #787878;
@@ -324,9 +325,13 @@ video {
 }
 .feature {
   width: 100%;
+  margin-right: 10px;
+  padding: 10px;
+
 }
 .feature-img {
   width: 70%;
+  height: 25rem;
 }
 .feature-heading {
   font-size: 1.8rem;
@@ -410,11 +415,14 @@ footer hr {
   outline: none;
   color: white;
   background: var(--color-dark);
-  padding: 1.6rem;
+  width: 146px;
+  padding: 20px;
+
   border-radius: 5px;
 }
 .response-time {
   margin-bottom: 4.6rem;
+  font-size: 11px;
 }
 .quote {
   flex: 1;
@@ -426,6 +434,7 @@ footer hr {
 .quote-text {
   padding: 7.6rem 9.6rem;
   margin: 0;
+  font-weight: bolder;
 }
 .team-members-container {
   flex: 1;
@@ -445,7 +454,7 @@ footer hr {
   margin-top: 6.4rem;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-evenly;
 }
 
 /* Hide the images by default */
@@ -553,7 +562,9 @@ footer hr {
 .white {
   color: white;
 }
-
+.company-img{
+  margin:5px;
+}
 .black {
   color: black !important;
 }
@@ -628,7 +639,7 @@ footer hr {
 }
 
 /* For Phone */
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 425px) {
   html {
     font-size: 42.5%;
   }
@@ -679,7 +690,9 @@ footer hr {
   }
 
   .feature-section-mobile {
-    display: block !important;
+    /* display: block !important; */
+    display: flex;
+    flex-direction: column;
   }
   .container {
     flex-direction: column;
@@ -709,5 +722,21 @@ footer hr {
 @media screen and (min-width: 2500px) {
   video {
     max-height: 750px;
+  }
+}
+/* for web view css */
+
+.mob-view{
+  display: none;
+}
+
+/* mobile view css */
+
+@media screen and (max-width: 425px) {
+  .web-view{
+    display: none;
+  }
+  .mob-view{
+    display: block;
   }
 }
