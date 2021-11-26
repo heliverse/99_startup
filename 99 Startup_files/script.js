@@ -1,5 +1,5 @@
 let topics = ['mobile app ','website ','product ']
-let slideIndex = 4;
+let slideIndex = 1;
 let slideIndexWork = 1
 let slideIndexMember = 1
 const featureImg = document.querySelector('.feature-img');
@@ -69,7 +69,8 @@ function showSlidesMember(n){
 function showSlidesQuestion(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+  var dots = document.getElementsByClassName("dot-nav");
+  console.log(dots)
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
