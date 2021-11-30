@@ -935,4 +935,10 @@ footer hr {
     background-size: cover !important;
     overflow: hidden;
   }
+  /* #slick-slide01 #slick-slide02 #slick-slide03#slick-slide04#slick-slide05{
+    display: none;
+  } */
+  .slick-dots li {
+    
+    display: none;}
 }
