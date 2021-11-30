@@ -107,26 +107,26 @@ function showSlidesMember(n) {
 }
 
 function showSlidesQuestion(n) {
-console.log("show slider question");
+// console.log("show slider question");
 
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot-nav");
-  console.log(dots);
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "flex";
-  dots[slideIndex - 1].className += " active";
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("dot-nav");
+//   console.log(dots);
+//   if (n > slides.length) {
+//     slideIndex = 1;
+//   }
+//   if (n < 1) {
+//     slideIndex = slides.length;
+//   }
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex - 1].style.display = "flex";
+//   dots[slideIndex - 1].className += " active";
 }
 function showSlidesWork(n) {
   console.log("slide")
@@ -256,32 +256,7 @@ function changeFeature(n) {
 
 
 
-
-// function companieSlider(){
-// let companies = document.getElementsByClassName('companies');
-// var div1 = document.createElement("div");
-// div1.add.classList('marquee-container')
-// var img = document.createElement("img");
-// img.src="./99 Startup_files/Expertrons _ Website 1.png"
-// var img1 = document.createElement("img");
-// img1.src="./99 Startup_files/Expertrons _ Website 1.png"
-// var img2 = document.createElement("img");
-// img2.src="./99 Startup_files/Expertrons _ Website 1.png"
-// var img3 = document.createElement("img");
-// img3.src="./99 Startup_files/Expertrons _ Website 1.png"
-// var img4 = document.createElement("img");
-// img4.src="./99 Startup_files/Expertrons _ Website 1.png"
-// var img5 = document.createElement("img");
-// img5.src="./99 Startup_files/Expertrons _ Website 1.png"
-// div1.appendChild(img)
-// div1.appendChild(img1)
-// div1.appendChild(img2)
-// div1.appendChild(img3)
-// div1.appendChild(img4)
-// div1.appendChild(img5)
-
-// }
-
+// typed.js
 
 var typed = new Typed('#typed',{
   stringsElement:'#type-strings',
@@ -291,4 +266,29 @@ var typed = new Typed('#typed',{
   shuffle: true,
   showCursor: false
 });
-console.log(typed)
+// slick slide js
+const $slider = $("#slider");
+console.log(slider)
+$slider
+.on('init', () => {
+mouseWheel($slider)
+})
+.slick({
+dots: true,
+vertical: true,
+infinite: false,
+})
+function mouseWheel($slider) {
+$(window).on('wheel', { $slider: $slider }, mouseWheelHandler)
+}
+function mouseWheelHandler(event) {
+event.preventDefault()
+const $slider = event.data.$slider
+const delta = event.originalEvent.deltaY
+if(delta > 0) {
+$slider.slick('slickNext')
+}
+else {
+$slider.slick('slickPrev')
+}
+}
