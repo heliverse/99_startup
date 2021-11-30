@@ -944,5 +944,14 @@ footer hr {
   .slick-dots li {
     
     display: none;}
+    .marquee-container1 > img {
+      height: 14px;
+      margin: 0.4rem;
+    }
+    .marquee-container > img {
+      height: 20px;
+      margin: 0.3rem;
+    }
+
 }
 
