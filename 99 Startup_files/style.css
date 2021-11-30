@@ -848,6 +848,9 @@ footer hr {
   .marquee-container {
     animation: scroll 30s infinite both;
   }
+  .marquee-container1 {
+    animation: scrollRight 20s linear infinite;
+  }
   .mySlides {
     display: flex;
     width: 100%;
@@ -942,3 +945,4 @@ footer hr {
     
     display: none;}
 }
+
